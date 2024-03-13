@@ -196,16 +196,7 @@ body,html{
     height: 100%;
     object-fit: cover;
 }
-@media only screen and (max-width: 480px) {
-    .project-description{
-        text-align: left;
-    }
-    .project .project-img img{
-        width: 100%;
-        max-height: 200px;
-        object-fit: cover;
-    }
-}
+
 @media only screen and (min-width: 786px) {
     .project{
         width: 100%;
@@ -405,6 +396,7 @@ body,html{
 .carousel-item img{
     height: 350px;
     object-fit: contain;
+    width: 100%;
 }
 
 .footer-wrapper{
@@ -437,10 +429,15 @@ body,html{
     .aside{
         height: fit-content;
         overflow-y: visible;
+        position: fixed;
+        top: 0;
+        z-index: 99;
+        background-color: rgba(33, 37, 41,1);
     }
-    /* .main-content{
-        overflow-y: visible;
-    } */
+    .main-content{
+        padding-top: 50px;
+        margin-top: 40px;
+    }
     .nav-mobile{
         display: block;
     }
@@ -451,6 +448,14 @@ body,html{
     }
     .mobile.open {
         max-height: 2000px;
+    }
+    .project-description{
+        text-align: left;
+    }
+    .project .project-img img{
+        width: 100%;
+        max-height: 200px;
+        object-fit: cover;
     }
 }
 
@@ -485,4 +490,6 @@ body,html{
         width: 30px;
         height: 48px;
     }
-    
+    /* section{
+        border: 1px red solid;
+    } */
