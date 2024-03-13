@@ -10,6 +10,6 @@ document.getElementById('nav-mobile-button').addEventListener('click',()=>{
 });
 
 function showModal(){
-    $('#modal').modal('show');
+    $('.modal').modal('show');
 }
 
