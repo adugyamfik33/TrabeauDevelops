@@ -45,7 +45,7 @@ body,html{
 }
 .content-wrapper{
     position: relative;
-    height: 100vh;
+    /* height: 100vh; */
 }
 .profile .profile-name{
     display: flex;
@@ -401,6 +401,7 @@ body,html{
 
 .footer-wrapper{
     position: relative;
+    display: block;
     bottom: 0;
     width: 100%;
     left: 0;
@@ -431,12 +432,14 @@ body,html{
         overflow-y: visible;
         position: fixed;
         top: 0;
-        z-index: 99;
+        z-index: 999;
         background-color: rgba(33, 37, 41,1);
     }
     .main-content{
         padding-top: 50px;
         margin-top: 40px;
+        overflow-y: visible;
+        height: fit-content;
     }
     .nav-mobile{
         display: block;
@@ -490,6 +493,3 @@ body,html{
         width: 30px;
         height: 48px;
     }
-    /* section{
-        border: 1px red solid;
-    } */
