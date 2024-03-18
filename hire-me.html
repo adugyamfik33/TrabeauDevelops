@@ -101,7 +101,7 @@
                     <div class="row justify-content-center" style="min-height: 400px;position: relative;padding: 0 20px;">
                         <div class="col-md-12">
                           <form
-                            method="POST"
+                          id="hire-me-form"
                             class="
                               p-4
                               border
@@ -139,7 +139,7 @@
                                 <label class="d-block mb-4">
                                     <span class="form-label d-block text-light">Phone Number</span>
                                     <input
-                                      name="phone_number"
+                                      name="phone-number"
                                       type="tel"
                                       class="form-control border-secondary bg-transparent text-light"
                                       placeholder="+233123456789"
@@ -180,8 +180,8 @@
                             </label>
                     
                             <div class="mb-3">
-                              <button type="submit" class="btn btn-success px-3 rounded-3">
-                                Send Message
+                              <button type="submit" id="email-btn" style="display: flex;justify-content: center;gap: 20px;padding:5px 0;" class="btn btn-success px-3 rounded-3">
+                                <span class="loader" id="loader" style="display: none;"></span> Send Message
                               </button>
                             </div>
                     
@@ -207,11 +207,13 @@
                       <span class="footer">&copy; <span id="currentYear"></span> Powered by TrabeauDevelops</span>
                   </div>
               </section>
+              <div id="toast" ><div id="img"></div><div id="desc"></div></div>
            </div> 
         </div>
     </div>
 </body>
 <script src="js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="js/script.js"></script>
 
 </html>

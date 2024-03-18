@@ -493,3 +493,151 @@ body,html{
         width: 30px;
         height: 48px;
     }
+    .loader {
+        color: #ffffff;
+        margin-top: 5px;
+        font-size: 13px;
+        text-indent: -9999em;
+        overflow: hidden;
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        position: relative;
+        transform: translateZ(0);
+        animation: mltShdSpin 1.7s infinite ease, round 1.7s infinite ease;
+      }
+      
+      @keyframes mltShdSpin {
+        0% {
+          box-shadow: 0 -0.83em 0 -0.4em,
+          0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+          0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+        }
+        5%,
+        95% {
+          box-shadow: 0 -0.83em 0 -0.4em, 
+          0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 
+          0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+        }
+        10%,
+        59% {
+          box-shadow: 0 -0.83em 0 -0.4em, 
+          -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, 
+          -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+        }
+        20% {
+          box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em,
+           -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, 
+           -0.749em -0.34em 0 -0.477em;
+        }
+        38% {
+          box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em,
+           -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, 
+           -0.82em -0.09em 0 -0.477em;
+        }
+        100% {
+          box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 
+          0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+        }
+      }
+      
+      @keyframes round {
+        0% { transform: rotate(0deg) }
+        100% { transform: rotate(360deg) }
+      }
+      #toast {
+        visibility: hidden;
+        max-width: 50px;
+        height: 50px;
+        /*margin-left: -125px;*/
+        margin: auto;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        border-radius: 2px;
+        position: fixed;
+        z-index: 9999;
+        right:50px;
+        top: 30px;
+        font-size: 17px;
+        white-space: nowrap;
+        
+    }
+    #toast #img{
+        width: 50px;
+        height: 50px;
+        float: left;
+        padding-top: 10px;
+        padding-bottom: 16px; 
+        box-sizing: border-box;
+        background-color:rgba(255, 255, 255, 1);
+        color: #fff;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    }
+    #toast #img svg{
+        margin: 0 auto;
+    }
+    #toast #desc{
+        height: 50px;
+        color: #fff;
+        padding: 16px;
+        text-align: left;
+        overflow: hidden;
+        white-space: nowrap;
+        background-color: rgb(33, 37, 41);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    }
+    
+    #toast.show {
+        visibility: visible;
+        -webkit-animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 2s, fadeout 0.5s 2.5s;
+        animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 4s, fadeout 0.5s 4.5s;
+    }
+    
+    @-webkit-keyframes fadein {
+        from {top: 0; opacity: 0;} 
+        to {top: 30px; opacity: 1;}
+    }
+    
+    @keyframes fadein {
+        from {top: 0; opacity: 0;}
+        to {top: 30px; opacity: 1;}
+    }
+    
+    @-webkit-keyframes expand {
+        from {min-width: 50px} 
+        to {min-width: 350px}
+    }
+    
+    @keyframes expand {
+        from {min-width: 50px}
+        to {min-width: 350px}
+    }
+    @-webkit-keyframes stay {
+        from {min-width: 350px} 
+        to {min-width: 350px}
+    }
+    
+    @keyframes stay {
+        from {min-width: 350px}
+        to {min-width: 350px}
+    }
+    @-webkit-keyframes shrink {
+        from {min-width: 350px;} 
+        to {min-width: 50px;}
+    }
+    
+    @keyframes shrink {
+        from {min-width: 350px;} 
+        to {min-width: 50px;}
+    }
+    
+    @-webkit-keyframes fadeout {
+        from {top: 30px; opacity: 1;} 
+        to {top: 60px; opacity: 0;}
+    }
+    
+    @keyframes fadeout {
+        from {top: 30px; opacity: 1;}
+        to {top: 60px; opacity: 0;}
+    }
